@@ -1,0 +1,21 @@
+@model LogUser
+<div class="col s12 m6">
+    <form asp-action="Login" asp-controller="LoginReg" method="POST">
+        <h4>Log In</h4>
+        <span asp-validation-for="LogEmail" class="red-text"></span>
+        <div class="input-field">
+            <label asp-for="LogEmail">Email</label>
+            <input type="text" asp-for="LogEmail">
+        </div>
+
+        <span asp-validation-for="LogPassword" class="red-text"></span>
+        <div class="input-field">
+            <label asp-for="LogPassword">Password</label>
+            <input type="password" asp-for="LogPassword">
+        </div>
+
+        <button type="submit" class="wedding-purple btn z-depth-2">Log In
+            <i class="material-icons right">arrow_forward</i>
+        </button>
+    </form>
+</div>

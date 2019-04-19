@@ -1,0 +1,45 @@
+@model RegUser
+<div class="col s12 m6">
+    <form asp-action="Register" asp-controller="LoginReg" method="POST">
+        <h4>Register</h4>
+        <span asp-validation-for="FirstName" class="red-text"></span>
+        <div class="input-field">
+            <label asp-for="FirstName">First Name</label>
+            <input type="text" asp-for="FirstName">
+        </div>
+
+        <span asp-validation-for="LastName" class="red-text"></span>
+        <div class="input-field">
+            <label asp-for="LastName">Last Name</label>
+            <input type="text" asp-for="LastName">
+        </div>
+
+        <span asp-validation-for="Username" class="red-text"></span>
+        <div class="input-field">
+            <label asp-for="Username">Username</label>
+            <input type="text" asp-for="Username">
+        </div>
+
+        <span asp-validation-for="Email" class="red-text"></span>
+        <div class="input-field">
+            <label asp-for="Email">Email</label>
+            <input type="text" asp-for="Email">
+        </div>
+
+        <span asp-validation-for="Password" class="red-text"></span>
+        <div class="input-field">
+            <label asp-for="Password">Password</label>
+            <input type="password" asp-for="Password">
+        </div>
+
+        <span asp-validation-for="ConfirmPassword" class="red-text"></span>
+        <div class="input-field">
+            <label asp-for="ConfirmPassword">ConfirmPassword</label>
+            <input type="password" asp-for="ConfirmPassword">
+        </div>
+
+        <button type="submit" class="wedding-purple btn z-depth-2">Register
+            <i class="material-icons right">arrow_forward</i>
+        </button>
+    </form>
+</div>

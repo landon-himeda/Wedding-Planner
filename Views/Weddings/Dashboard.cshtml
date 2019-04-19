@@ -1,0 +1,44 @@
+@model DashboardView
+<h3 class="card-panel white-text z-depth-2 wedding-purple center-align" id="fittext">Celebrate With Us</h3>
+<div class="row right-align">
+    <a class="btn pink-on-white hoverable" href="/logout"><i class="material-icons right">near_me</i>Log Out</a>
+</div>
+<span class="text-danger">@Html.ValidationMessageFor(model => model.user)</span>
+<table class="table highlight centered">
+    <thead>
+        <tr>
+            <th scope="col">Wedding - Click to View</th>
+            <th scope="col">Date</th>
+            <th scope="col">Number of Guests</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    @{
+        @foreach (Wedding wedding in Model.weddings)
+        {
+            <tr>
+                <td><a href="/view/@wedding.WeddingId">@wedding.WedderOne & @wedding.WedderTwo</a></td>
+                <td>@wedding.Date.ToString("MMMM dd yyyy")</td>
+                <td>@wedding.RSVPs.Count</td>
+                @if (@wedding.UserId == Model.user.UserId)
+                {
+                    <td><a href="/delete/@wedding.WeddingId" class="scale-transition">Delete</a></td>
+                }
+                else if(@wedding.RSVPs.Any(r => r.UserId == @Model.user.UserId))
+                {
+                    <td><a href="/unrsvp/@Model.user.UserId/@wedding.WeddingId">Un-RSVP</a></td>
+                }
+                else
+                {
+                    <td><a href="/rsvp/@Model.user.UserId/@wedding.WeddingId">RSVP</a></td>
+                }
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+<div class="row center-align section">
+    <a class="btn center-align pink-on-white hoverable" href="/new"><i class="material-icons right">add</i>New Wedding</a>
+</div>
+<div class="banner-two section card-panel z-depth-4 hide-on-small-only" alt="Banner"></div>

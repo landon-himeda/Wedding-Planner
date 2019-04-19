@@ -1,0 +1,107 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.background {
+    background-image: url("../images/WeddingBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* min-height: 930px; */
+}
+
+.wedding-purple {
+    background-color: rgb(204, 164, 183);
+    background: linear-gradient(rgb(204, 164, 183) 0%, rgb(223, 179, 199) 100%);
+}
+
+.btn {
+    font-family: Georgia, serif;
+}
+
+.btn:hover {
+    background-color: rgb(220, 196, 202);
+}
+
+* {
+    font-family: Georgia, serif;
+}
+
+.banner-one {
+    height: 170px;
+    width: 100%;
+    background-image: url("../images/WalkingThroughTreesCropped.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #000000;
+    border-radius: 15px;
+}
+
+.banner-two {
+    height: 200px;
+    width: 100%;
+    background-image: url("../images/HoldingHandsBanner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #000000;
+    border-radius: 15px;
+}
+
+.vertical-banner {
+    height: 600px;
+    width: 100%;
+    background-image: url("../images/CoupleVerticalCropped.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 20px #868686;
+    border-radius: 10px;
+    border-style: solid;
+    border-color:rgb(218, 196, 202);
+}
+
+.pink-on-white {
+    color: #ca7ea3;
+    background-color: #fffdf7;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
